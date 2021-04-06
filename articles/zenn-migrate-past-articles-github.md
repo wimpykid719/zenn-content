@@ -3,11 +3,11 @@ title: "Zennの過去記事を含め、Githubで連携するようにした。" 
 emoji: "🚚" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["zenn", "git", "github", "作業ログ"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 ## 最初に
 
-Next.jsのチュートリアルを終えて、自分のブログというものを作成したいと思いました。
+唐突ですが、Next.jsのチュートリアルを終えて、自分のサイトが欲しいと思うようになった。
 どうせなら記事をGithubのリポジトリで管理して、そこにアップしたらzennと自分のブログに記事が表示されるようになったら一石二鳥だなと思った。
 その前手順でGithubでZennの投稿を管理するようにしたいと思う。
 すでに16記事ほどzennのオンラインエディタから投稿しているので過去の記事も移行したいと思う。
@@ -53,6 +53,8 @@ zennには `slug` と呼ばれる各記事に付けられる固有のIDがある
 ファイルには記事のメタ情報（タイトル・絵文字・タイプ・トピック・公開設定）を含める必要があるので、こちらの内容もあらかじめ記事と同じにする。
 上記の記事だとこんな感じのメタ情報になる。
 
+ちなみに [https://zenn.dev/api/articles/3c8a872a210ded/markdown](https://zenn.dev/api/articles/3c8a872a210ded/markdown) こうする事でマークダウンを取得出来る。
+
 ```markdown
 ---
 title: "独学・未経験】Pythonデスクトップアプリを作成したから見て欲しい。 （ポートフォリオ ）" # 記事のタイトル
@@ -90,3 +92,7 @@ published: true # 公開設定（falseにすると下書き）
 [Zenn CLIで記事・本を管理する方法](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
 [Zennのスラッグ（slug）とは](https://zenn.dev/zenn/articles/what-is-slug)
+
+[GitHubリポジトリ連携を通して感じたZennの良さ](https://zenn.dev/unsoluble_sugar/articles/9c04a36a5decdb6d1b20)
+
+[https://zenn.dev/yajamon/articles/ebd678f0dd57936e7673](https://zenn.dev/yajamon/articles/ebd678f0dd57936e7673)
