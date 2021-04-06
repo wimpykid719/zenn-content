@@ -8,11 +8,8 @@ published: false # 公開設定（falseにすると下書き）
 ## 最初に
 
 Next.jsのチュートリアルを終えて、自分のブログというものを作成したいと思いました。
-
 どうせなら記事をGithubのリポジトリで管理して、そこにアップしたらzennと自分のブログに記事が表示されるようになったら一石二鳥だなと思った。
-
 その前手順でGithubでZennの投稿を管理するようにしたいと思う。
-
 すでに16記事ほどzennのオンラインエディタから投稿しているので過去の記事も移行したいと思う。
 
 ### やる事
@@ -24,9 +21,7 @@ Next.jsのチュートリアルを終えて、自分のブログというもの�
 ## リポジトリの作成
 
 リポジトリの構成は `articles` フォルダに記事を入れていく。
-
 zennではこのフォルダ名から記事を検索するようになっているので、同じように作成する必要がある。
-
 最初はとりあえず、空のフォルダを作成して、リポジトリを作成する。
 
 ```
@@ -45,23 +40,16 @@ zennではこのフォルダ名から記事を検索するようになってい�
 ## 過去記事をリポジトリに追加する
 
 最初からGithubで記事を管理している人は良いが、自分みたいなある程度記事を投稿している人は少し手間が掛かる。
-
 最初は書いた記事を全て削除してからではないと、記事がダブったりするのではと思って `zenn github 連携 過去の記事` 等でgoogle先生に聞いていたのだが結果的にその心配はなかった。
-
 zennには `slug` と呼ばれる各記事付けられる固有のIDがある。
-
 そのIDは記事のURLに含まれている。
 
 [https://zenn.dev/unemployed/articles/3c8a872a210ded](https://zenn.dev/unemployed/articles/3c8a872a210ded)
 
 これが [`3c8a872a210ded`](https://zenn.dev/unemployed/articles/3c8a872a210ded) が `slug` と呼ばれるIDになる。
-
 それをファイル名に入れて `3c8a872a210ded.md` とする事でオンラインエディタで作成した記事と結び付けてくれる。
-
 そのおかげでこれまでのいいね・コメントを保ったままに出来る。これはとてもありがたい。
-
 ただこれだけだと、ファイルの中身が空っぽなので記事をコピー・ペーストする必要がある。これが16記事もあたるとまぁまぁ大変だった。
-
 ファイルには記事のメタ情報（タイトル・絵文字・タイプ・トピック・公開設定）を含める必要があるのでこちらの内容もあらかじめ記事と同じにしておく。上記の記事だとこんな感じのメタ情報になる。
 
 ```markdown
@@ -76,12 +64,25 @@ published: true # 公開設定（falseにすると下書き）
 ```
 
 2021/4/7時点では、過去の記事を取得する方法は手作業しかないのでこうする他ない。
-
 記事のデータを取得する方法は今後追加されるかもしれない。それまで待てないまたは記事がそこまで多くない人は早めにやっておくと後で楽かもしれない。
-
 実際に自分が作成したzennの記事を管理するリポジトリ
 
 [wimpykid719/zenn-content](https://github.com/wimpykid719/zenn-content)
+
+## 最後に
+
+この記事がGithubに連携してから初めて書く記事で、連携させると今まで自動で生成されていた `slug` を個別に設定する事が出来る。
+この記事のパスは `https://zenn.dev/unemployed/articles/zenn-migrate-past-articles-github` となっていて記事のファイル名に付けた `zenn-migrate-past-articles-github` がそのまま使用されている。
+
+記事に関するコメント等は
+
+🕊：[Twitter](https://twitter.com/Unemployed_jp)
+📺：[Youtube](https://www.youtube.com/channel/UCT3wLdiZS3Gos87f9fu4EOQ/featured?view_as=subscriber)
+📸：[Instagram](https://www.instagram.com/unemployed_jp/)
+👨🏻‍💻：[Github](https://github.com/wimpykid719?tab=repositories)
+😥：[Stackoverflow](https://ja.stackoverflow.com/users/edit/22565)
+
+でも受け付けています。どこかにはいます。
 
 ### 参照
 
