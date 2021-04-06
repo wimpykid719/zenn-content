@@ -95,4 +95,4 @@ published: true # 公開設定（falseにすると下書き）
 
 [GitHubリポジトリ連携を通して感じたZennの良さ](https://zenn.dev/unsoluble_sugar/articles/9c04a36a5decdb6d1b20)
 
-[https://zenn.dev/yajamon/articles/ebd678f0dd57936e7673](https://zenn.dev/yajamon/articles/ebd678f0dd57936e7673)
+[Zennの記事をexportする](https://zenn.dev/yajamon/articles/ebd678f0dd57936e7673)
