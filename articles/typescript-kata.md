@@ -303,6 +303,16 @@ console.log(error('This is an error'));
 
 調べる前は String, Number等の引数型があらかじめ分かっても、そこまで読みやすくなるのかと思っていた。オブジェクトの型、配列の型で細かく型を設定できると知り確かにこれなら戻ってくるJsonファイルの型とかを書いておけば後でコードを読んでも実際に実行する機会とかを減らせして効率が上がるのかなと思った。まだ途中なので色々と勉強していきたいと思います。
 
+記事に関するコメント等は
+
+🕊：[Twitter](https://twitter.com/Unemployed_jp)
+📺：[Youtube](https://www.youtube.com/channel/UCT3wLdiZS3Gos87f9fu4EOQ/featured?view_as=subscriber)
+📸：[Instagram](https://www.instagram.com/unemployed_jp/)
+👨🏻‍💻：[Github](https://github.com/wimpykid719?tab=repositories)
+😥：[Stackoverflow](https://ja.stackoverflow.com/users/edit/22565)
+
+でも受け付けています。どこかにはいます。
+
 ### 参照
 
 [TypeScript｜アンビエント宣言(declare)と型定義ファイル(.d.ts) - わくわくBank](https://www.wakuwakubank.com/posts/501-typescript-declaration/)
