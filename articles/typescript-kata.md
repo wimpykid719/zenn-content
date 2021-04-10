@@ -85,6 +85,20 @@ const person : {
 	},
 	age: 21
 }
+
+//オブジェクト内に関数がある場合
+const Falcon : {
+    name: string;
+    fly: () => void;
+} = {
+    name: '鷹',
+    fly: function(): void{
+        console.log(this.name + 'が大空を飛びました');
+    }
+};
+
+Falcon.fly();  // '鷹が大空を飛びました
+
 ```
 
 ## 配列の型書き方

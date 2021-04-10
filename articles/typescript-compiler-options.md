@@ -243,7 +243,7 @@ const Penguin : {
 // 鷹
 const Falcon : {
     name: string;
-    fly: any;
+    fly: () => void;
 } = {
     name: '鷹',
     fly: function(): void{
