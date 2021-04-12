@@ -63,6 +63,13 @@ TypeScriptがどの型か変数の値から自動で教えてくれる。
 ## オブジェクトの型書き方
 
 ```tsx
+const a: object = {
+	name: 'daigakuseidatta',
+	age: 25
+}
+//a.name と実行してもそんなのないと言われる
+
+//オブジェクトリテラル型で型定義する。
 const person : {
 	name: string;
 	age: number;
@@ -70,6 +77,35 @@ const person : {
 	name: 'Jack',
 	age: 21
 }
+
+//オプショナルプロパティを使う(?)
+let person: {
+	age: number
+	lastName: string
+	readonly first: string
+	gender?: string//?で会ってもなくてもよくなる。
+} = {
+	age: 28,
+	latsName: 'sato',
+	firstName: 'tiaki'
+	//genderがなくても怒られない。
+}
+person.gender = 'male' //後から追加できる。
+person.lastName = 'kobayashi' //上書きできる。
+person.firstName = 'kuniko' //上書き出来ない。
+
+//インデックスシグネチャ
+// オブジェクトが複数のプロパティを持つ可能性を示す。
+// [key:T]: Uのように定義する。
+// keyはstringかnumberのみ
+const capitals: {
+	[countryName: string]: string
+} = {
+	Japan: 'Tokyo',
+	Korea: 'Seoul'
+}
+capitals.China = 'Beijing'
+capitals.Canada = 'Ottawa'
 
 //ネストする場合
 const person : {
@@ -133,13 +169,72 @@ coffee.size = 'SHOT'
 coffee.size = CoffeeSize.SHORT
 ```
 
-## union型
+## union型（合併型）・Intersection型（交差型）
 
+**合併型**
 複数の型を指定したい時に使用する。
+型Aか型Bのどちらかの型を持つ
+
+**交差型**
+型Aと型B両方の型を持つ
+交差型は「AとBに共通する型」ではない。
 
 ```tsx
+//合併型を簡素に使用した場合
 let unionType: number | string = 10;
+
+
+type Knight = {
+	hp: number
+	sp: number
+	weapon: string
+	swordSkill: string
+}
+
+type Wizard = {
+	hp: number
+	mp: number
+	weapon: sting
+	magicSkill: string
+}
+
+// 合併型...KnightまたはWizardの型を持つ。
+type Adventurer = Knight | Wizard
+
+// 交差型... KnightかつWizardの型を持つ
+type Paladin = Knight & Wizard
+
+//合併型の場合ここにmpが追加されてもエラーにならない。
+//指定された型があってもなくても良い。
+const adventure1: Adventure = {
+	hp: 100,
+	sp: 30,
+	//mp: 30,
+	weapon: '木の剣',
+	swordSkill: '三連斬り',
+}
+
+//Wizard寄りの冒険者
+const adventure2: Adventurer = {
+	hp: 100,
+	mp: 30,
+	weapon: '木の枝',
+	magicSkill: 'ファイアボール'
+}
+
+//交差型は合併したものが全て揃ってないとだめ。
+const paladin: Paladin = {
+	hp: 300,
+	sp: 100,
+	mp: 100,//一つでも型が欠けるとエラーになる。
+	weapon: '銀の剣',
+	swordSkill: '日輪',
+	magicSkill: 'アルティメットキャノン'
+}
+
+
 ```
+
 
 ## リテラル型
 
@@ -176,8 +271,10 @@ const cloth = {
 
 ```
 
-## エイリアス
-
+## 型エイリアス
+- typeを使って、型に名前を付けて宣言できる。
+- 同じ型を何度も定義する必要がない。（再利用性が高い）
+- 型に名前を付けることで変数の役割を明確化できる。
 先ほどの `'small' | 'medium' | 'large'` を変数みたいに格納したい。
 
 ```tsx
@@ -192,7 +289,159 @@ const cloth = {
 	size: 'medium'
 }
 
+type Country = {
+	capital: string
+	language: string
+	name: string
+}
+
+const japan: Country = {
+	capital: 'Tokyo',
+	language: 'Japanese',
+	name: 'Japan'
+}
+
 ```
+
+## Interface・Type Alias 使い方
+2021年時点でマイクロソフトはInterfaceの方が拡張しやすいという。理由から推奨している。
+
+### Interface
+- interface宣言子で定義する。
+- Type Aliasと違って「=」は不要（一種のクラスなので=がいらない）
+```tsx
+interface Bread {
+	calories: number
+}
+```
+- 同名のinterfaceを宣言すると型が追加（マージ）される後から型を追加定義できる。
+- 宣言のマージ：同じ名前を共有する複数の宣言を自動的に結合
+```tsx
+interface Bread {
+	type: string
+}
+
+const francePan: Bread = {
+	calories: 350,
+	type: 'hard'
+}
+
+```
+実際に色々、継承してみる。
+```tsx
+interface Bread {
+	calories: number
+}
+
+nterface Bread {
+	type: string
+}
+
+const francePan: Bread = {
+	calories: 350,
+	type: 'hard'
+}
+
+//上記のinterfaceを型エイリアスで表現
+type MaboDofu = {
+	calories: number
+	spicyLevel: number
+}
+type Rice = {
+	calories: number
+	gram: number
+}
+
+type MaboDon = MaboDon & Rice // 交差型（Intersection）
+
+const maboDon: MaboDon = {
+	calories: 500,
+	spicyLevel: 10,
+	gram: 350
+} 
+```
+
+### Interfaceの拡張
+- extendsを使う事で継承したサブインターフェースを作れる。
+- Type Aliasをextendsすることも出来る。
+```tsx
+interface Book {
+	page: number
+	title: string
+}
+
+interface Magazine extends Book {
+	cycle: 'daily' | 'weekly' | 'monthly' | 'yearly'
+}
+
+const jump: Magazine = {
+	cycle: 'weekly',
+	oage: 300,
+	title: '週刊少年ジャンプ'
+}
+
+//type Aliasを継承してみる。
+type BookType = {
+	page: number
+	title: string
+}
+
+interface Handbook extends BookType {
+	theme: string
+}
+
+//最後はInterfaceの型で変数を作成する。
+const nijiiro: HandBook = {
+	page: 138,
+	title: 'にじいろ',
+	theme: '旅行'
+}
+```
+
+### Interfaceでclassに型を定義する。
+- implements（実装する）を使ってclassに型を定義する。
+```tsx
+interface Book {
+	page: number
+	title: string
+}
+//Bookを実装するComicと読めば良い。
+//Bookを実装するComicは必ずpage、titleというプロパティを持つ
+class Comic implements Book {
+	page: number;
+	title: string;
+	constructor(page: number, title: string, private publishYear: string) {
+		this.page = page
+		this.title = title
+	}
+	getPublishYear() {
+		return this.title + "が発売されたのは" + this.publishYear + "年です。"
+	}
+}
+
+
+const popularComic = new Comic(200, '鬼滅の刃', 2016)
+
+```
+
+### Type AliasとInterfaceの違い
+
+**Type Alias**
+用途：複数の場所で再利用する型に名前を付ける。
+拡張性：同名のtypeを宣言するとエラー
+継承：継承はできない交差型で新しい型エイリアスを作る
+使用できる型：オブジェクト関数以外のプリミティブ、配列、タプルも宣言可能
+考慮事項：拡張しにくい不便さがある。
+いつ使う：アプリ開発ではType Alias
+
+**Interface**
+用途：オブジェクト・クラス・関数の構造を定義するため
+拡張性：同名のinterfaceを宣言するとマージされる（宣言のマージ）
+継承：extendsによる継承ができる
+使用できる型：オブジェクトと関数の型のみ宣言できる
+考慮事項：拡張できることによりバグを生む可能性
+いつ使う：ライブラリ開発ではInterface
+
 
 ## 関数に型を付ける
 
