@@ -581,3 +581,7 @@ console.log(error('This is an error'));
 [TypeScript｜アンビエント宣言(declare)と型定義ファイル(.d.ts) - わくわくBank](https://www.wakuwakubank.com/posts/501-typescript-declaration/)
 
 [超TypeScript入門完全パック- TypeScriptでアプリを作りたい方必見！](https://www.youtube.com/watch?v=F9vzRz6jyRk)
+
+[【日本一わかりやすいTypeScript入門】型エイリアス(type)でオブジェクトの型定義](https://www.youtube.com/watch?v=2DoYdw-rvL0&list=PLX8Rsrpnn3IW0REXnTWQp79mxCvHkIrad&index=6)
+
+[【日本一わかりやすいTypeScript入門】ハンズオンで理解するInterfaceとType Aliasの違い](https://www.youtube.com/watch?v=J2vox52T4W8&list=PLX8Rsrpnn3IW0REXnTWQp79mxCvHkIrad&index=10)
