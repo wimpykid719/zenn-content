@@ -4,6 +4,7 @@ emoji: "🧐" # アイキャッチとして使われる絵文字（1文字だけ
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["typescript", "初心者", "作業ログ"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
+date: '2021.04.09'
 ---
 
 ## tsconfig.jsonファイルを作成する。
