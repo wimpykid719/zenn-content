@@ -12,9 +12,10 @@ date: '2021.05.10'
 Reactのチュートリアル、Next.jsのチュートリアル、TypeScriptの入門?を終えたので、そのアウトプットとして無料で運用出来るtechBlogを作成しようと思う。記事は新しくブログ用に書くとZennと分散してしまうのでZennに投稿している記事を使ってサイトをビルドしていく。その前、準備としてZennとGitHubを連携する必要があるのでまだ行っていない方は[こちらの記事](https://techblog-pink.vercel.app/posts/zenn-migrate-past-articles-github)を参考にすると出来ます。
 
 ### 実際に作成したtechBlog
-
+モバイル版
 ![https://storage.googleapis.com/zenn-user-upload/0wwzsv9bsoyo8wicyl5j6fwe98yo](https://storage.googleapis.com/zenn-user-upload/0wwzsv9bsoyo8wicyl5j6fwe98yo)
 
+デスクトップ版
 ![https://storage.googleapis.com/zenn-user-upload/j55aisuqu75pesx7rx66j6bhfnww](https://storage.googleapis.com/zenn-user-upload/j55aisuqu75pesx7rx66j6bhfnww)
 
 [techBlog：大学生だった](https://techblog-pink.vercel.app)
@@ -40,8 +41,6 @@ Reactのチュートリアル、Next.jsのチュートリアル、TypeScriptの�
 - google analyticsを導入する。
 
 ## Next.js
-
-公式のチュートリアルを終えて、そこで学んだ事を書いていく。
 
 node.jsをインストールしたら開発を始めたいフォルダ内で `npx create-next-app` を実行すると必要なファイルやフォルダを生成してくれる。実行後はチュートリアルで作成したブログが出来上がっていると思う。基本的にそのブログを少カスタマイズしていく。
 
