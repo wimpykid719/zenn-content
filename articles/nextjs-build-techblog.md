@@ -1,5 +1,5 @@
 ---
-title: "【無料で運用出来る】techBlogをNext.js, Tailwindcss, TypeScript, Githubリポジトリ, Vercelで作成した。" # 記事のタイトル
+title: "【無料で運用出来る】techBlogをNext.js, Tailwindcss, TypeScript, Vercelで作成した。" # 記事のタイトル
 emoji: "📜" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["nextjs", "react", "typescript", "javascript", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
