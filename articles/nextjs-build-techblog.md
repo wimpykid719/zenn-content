@@ -2,7 +2,7 @@
 title: "【無料で運用出来る】techBlogをNext.js, Tailwindcss, TypeScript, Vercelで作成した。" # 記事のタイトル
 emoji: "📜" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["nextjs", "react", "typescript", "javascript", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["nextjs", "react", "typescript", "tailwindcss", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 date: '2021.05.10'
 ---
@@ -1304,6 +1304,8 @@ export const event = ({action, category, label}: Event) => {
 🔨：記事ページでのレコメンド（タグ名から）
 
 🔨：RSS対応
+
+🔨：zenn-contentリポジトリが更新されたらVercelで再ビルドが走るようにしたい。
 
 ### 参照
 
