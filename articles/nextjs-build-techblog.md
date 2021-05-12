@@ -32,7 +32,7 @@ Reactのチュートリアル、Next.jsのチュートリアル、TypeScriptの�
 - Next.js
 - index.tsx
 - 記事をzennの投稿を管理しているリポジトリから取得する。
-- TypeScriptでAPIで受け取るデータの型を指定する。
+- TypeScriptでAPIの型を定義する。
 - [id].tsx
 - コードのシンタックスハイライト、数式、テーブルを表示する。
 - component各種
