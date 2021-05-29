@@ -1,5 +1,5 @@
 ---
-title: "素人がDjangoで投票アプリを作成して躓いたところ前編" # 記事のタイトル
+title: "Django公式チュートリアルで分からない所、徹底的に調べた。" # 記事のタイトル
 emoji: "🍟" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["django", "python"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -401,9 +401,27 @@ class BookModel(models.Model):
     rating = models.IntegerField()
 ```
 
+## ForeignKey（外部制約キー）
+
+これを使ってこの後2つのモデルを双方向に参照できるようにするのだが、その前にデータベースにおいて外部制約キーまたは外部キーとも呼ばれるがどのような役割を果たしているのかみていこうと思う。
+
+外部キーとは関係データベースにおいてデータの整合性を保つための制約（参照整合性制約）
+
+外部キーに設定されている列（子テーブルのカラム）には、参照先となるテーブルの列内（親テーブルのカラム内）に存在している値しか設定できない。
+
+そのため、外部キーに設定されている子テーブルの列内に親テーブルの列内に存在しない値を追加しようとするとエラーになる。
+
+なので新しく値を追加したい場合は一度、親テーブルで追加する必要がある。
+
+このように制約を結ぶ事でデータの整合性を保つ事ができる。
+
+Djangoでは foreign keyが設定されている方が子テーブルになる。
+
 今度は少し複雑なモデルを見ていく。
 
-QuestionとChoiceという2つのモデルを作成する。
+図のようなQuestionとChoiceという2つのモデルを作成する。
+
+![](https://storage.googleapis.com/zenn-user-upload/355c9359eb64a611d5b0f4ab.png)
 
 ChoiceにQuestionが `ForeignKey` を使って紐ずけられている。 `on_delete=models.CASCADE` は紐づけられたモデルが削除される際にどのような動作をするかを決める事が出来る。削除された後そのモデルだった部分をNullで埋めたり、そもそも削除できないようにしたりと出来る。 `CASCADE` は紐づけられた側のモデルで関連するオブジェクトも削除するという動きになる。なので Questionが削除されたら、Questionと関連のあるChoice側のオブジェクトも削除するような動作を取る。
 
@@ -618,6 +636,30 @@ djangoの場合はModel（=テーブル）には必ず1つの主キー用のフ�
 
 pkキーを上記の `code` のように定義した場合はidは作成されない。
 
+## SQLに直接アクセスする。（おまけ）
+
+sqllite3を使用してデータベースを作成している場合はmysiteフォルダ内にデータベースのファイルが生成されていると思うので、下記のコマンドからSQLで操作するシェルに入る事ができる。
+
+```bash
+sqlite3 db.sqlite3
+# シェル内での操作
+# 作成されたテーブル一覧を確認できる。
+>>> .table
+auth_group                  django_admin_log          
+auth_group_permissions      django_content_type       
+auth_permission             django_migrations         
+auth_user                   django_session  
+                            # 先ほどモデルから作成されたテーブル          
+auth_user_groups            polls_choice              
+auth_user_user_permissions  polls_question
+
+# 構造を確認できるみたいだけど、見てもよく分からなかった。
+>>> .schema
+
+# シェルから抜ける。
+>>> .quit
+```
+
 モデルからデータベースを操作する事ができたので、次に先ほど登場したadminページにアクセスしたいと思う。
 
 ## adminページアクセスする。
@@ -635,7 +677,13 @@ Password（again）：
 
 ユーザを作成したら開発サーバを起動して[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) にアクセスするとログイン画面となるのでログインする。
 
+![](https://storage.googleapis.com/zenn-user-upload/52f576fd75064ac41c38887f.png)
+
 するとそこから作成したモデルを閲覧したりデータを追加したりできる。
+
+![](https://storage.googleapis.com/zenn-user-upload/7bb1032881a75b5066c66cee.png)
+
+ChoiceモデルからはQuestionを選択して使用することしか出来ないのが確認できる。 右側にある + ボタンを押すと Questionのページに飛びそこから新しい質問を追加することはできる。
 
 ## Views.pyからデータベースの値を取得する
 
@@ -1124,6 +1172,14 @@ def vote(request, question_id):
 [DJangoのお勉強(1) - Qiita](https://qiita.com/ShimantoAkira/items/ec1130fbd2a65cd5b7f3)
 
 [ドキュメント](https://docs.djangoproject.com/ja/3.2/intro/)
+
+[Djangoの汎用ビュー入門（ListView）](https://hombre-nuevo.com/python/python0057/)
+
+[FOREIGN KEY制約(外部キー制約を設定する)](https://www.dbonline.jp/mysql/table/index11.html)
+
+[外部キー制約とは｜「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典](https://wa3.i-3-i.info/word17575.html)
+
+[Django ForeignKeyで1対多のモデルを構築](https://noumenon-th.net/programming/2019/12/02/foreignkey/)
 
 記事に関するコメント等は
 
