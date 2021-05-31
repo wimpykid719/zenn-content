@@ -421,7 +421,7 @@ Djangoでは foreign keyが設定されている方が子テーブルになる�
 
 図のようなQuestionとChoiceという2つのモデルを作成する。
 
-![](https://storage.googleapis.com/zenn-user-upload/355c9359eb64a611d5b0f4ab.png)
+![](https://storage.googleapis.com/zenn-user-upload/2010557ea93110bd32304c66.png)
 
 ChoiceにQuestionが `ForeignKey` を使って紐ずけられている。 `on_delete=models.CASCADE` は紐づけられたモデルが削除される際にどのような動作をするかを決める事が出来る。削除された後そのモデルだった部分をNullで埋めたり、そもそも削除できないようにしたりと出来る。 `CASCADE` は紐づけられた側のモデルで関連するオブジェクトも削除するという動きになる。なので Questionが削除されたら、Questionと関連のあるChoice側のオブジェクトも削除するような動作を取る。
 
@@ -1074,7 +1074,7 @@ indexでは `ListView` を継承している。
 
 detail, resultsでは `DetailView` を継承している。
 
-*ListView*
+**ListView**
 
 「オブジェクトのリストを表示する。」
 
@@ -1092,7 +1092,7 @@ detail, resultsでは `DetailView` を継承している。
 
 このようにメソッドが実行されるので継承したクラスに `get_quesryset()` メソッドを追加して内容を上書きする事が出来る。
 
-**template_name**
+*template_name*
 
 `ListView` ではデフォルトの場合 `<app name>/<model name>_list.html` を自動で生成して使用する。
 
@@ -1100,17 +1100,23 @@ detail, resultsでは `DetailView` を継承している。
 
 しかし元々作成してある `polls/index.html` を使用したい場合は `template_name` に `'polls/detail.html'` を代入する事でDjangoがそちらを使用するように認識してくれる。
 
-*DetailView*
+**DetailView**
 
 「あるタイプのオブジェクト詳細ページを表示する。」
 
 なので ListViewの詳細ページをDetailViewで表示するみたいな使われ方をする。
 
-**template_name**
+*template_name*
 
 そしてデフォルトでは `DetailView` は `<app name>/<model name>_detail.html` という名前のテンプレートを自動生成して使用する。
 
 その場合、テンプレート名は `polls/question_detail.html` になるが、今回は自動生成されたものではなく元々作成してある `polls/detail.html` を使いたいので `template_name` を指定して元々のテンプレートを使用する。方法はListViewの時と同じで `template_name` に `polls/detail.html` を代入する。
+
+**model**
+
+このクラス変数はビューが使用するモデルを指定している。
+
+`model = Question` の場合は裏側で `Question.objects.all()` を行ってくれる。なので `queryset = Question.objects.all()` としても良い。
 
 ```python
 from django.http import HttpResponseRedirect
