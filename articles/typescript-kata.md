@@ -21,6 +21,10 @@ date: '2021.04.08'
 - 作業ディレクトリを作成
 - `npm install typescript --save-dev`
 - 上記のコマンドはローカルインストールなので、tscコマンドを実行する場合はパス指定する必要がある。 `../node_modules/.bin/tsc -v`
+- tsconfig.jsonの作成 `../node_modules/.bin/tsc --init` コンパイル時の設定を変更できる。ない場合はデフォルトの設定が使用される。
+- 実行は `../node_modules/.bin/tsc コンパイルしたい.ts` コンパイルして
+- `node index.js` で実行する。
+- `npm install --save-dev @types/node` するとnode.jsのパッケージが使用できる。 `fs` 等
 
 ## アンビエント宣言（declare）
 
@@ -586,3 +590,5 @@ console.log(error('This is an error'));
 [【日本一わかりやすいTypeScript入門】型エイリアス(type)でオブジェクトの型定義](https://www.youtube.com/watch?v=2DoYdw-rvL0&list=PLX8Rsrpnn3IW0REXnTWQp79mxCvHkIrad&index=6)
 
 [【日本一わかりやすいTypeScript入門】ハンズオンで理解するInterfaceとType Aliasの違い](https://www.youtube.com/watch?v=J2vox52T4W8&list=PLX8Rsrpnn3IW0REXnTWQp79mxCvHkIrad&index=10)
+
+[TypeScript で error TS2307: Cannot find module ‘fs’. が表示された時に、@types/node パッケージをインストールすると解決されました。[2020]](https://tech-for.com/2020/03/04/fix-an-error-that-ts2307-cannot-find-module-fs-by-installing-types-node-package/)
