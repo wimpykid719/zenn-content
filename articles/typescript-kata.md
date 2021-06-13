@@ -338,7 +338,7 @@ interface Bread {
 	calories: number
 }
 
-nterface Bread {
+interface Bread {
 	type: string
 }
 
