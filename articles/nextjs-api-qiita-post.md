@@ -1,5 +1,5 @@
 ---
-title: "Next.jsのAPI機能を使ってQiitaの投稿記事をZennみたいにリポジトリから投稿・更新、管理出来るようにした。" # 記事のタイトル
+title: "Next.jsのAPI機能を使ってQiitaの投稿記事をZennみたいにリポジトリから自動投稿・更新、管理出来るようにした。" # 記事のタイトル
 emoji: "🦑" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["nextjs", "react", "typescript", "api", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
