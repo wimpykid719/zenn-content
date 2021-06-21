@@ -1,8 +1,8 @@
 ---
-title: "【無料で作る】Vercelを使ってAPIを立てた。Qiitaの記事をZennみたいにリポジトリから自動投稿・更新出来るようにした。" # 記事のタイトル
+title: "Vercel functionを使ってQiitaの記事をGitHubリポジトリから自動投稿・更新出来るAPIを作ってみた。" # 記事のタイトル
 emoji: "🦑" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
-topics: ["nextjs", "react", "typescript", "api", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
+topics: ["nextjs", "react", "typescript", "github", "vercel"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
 date: '2021.06.21'
 ---
