@@ -13,6 +13,9 @@ date: '2021.06.21'
 
 ## 追加機能
 
+![techBlog構成 001](https://user-images.githubusercontent.com/23703281/122751598-f163ac00-d2ca-11eb-8c4c-f7b0cf444a32.jpeg)
+※よく見かけるサービス構成図なるものを書いてみた。
+
 techBlogに新たに追加する機能をまとめてみた。
 
 - Zennみたいに連携したリポジトリに記事を追加したらQiitaに投稿・更新を行う。
