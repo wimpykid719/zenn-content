@@ -13,7 +13,7 @@ date: '2021.06.21'
 
 ## 追加機能
 
-![techBlog構成 001](https://user-images.githubusercontent.com/23703281/122751598-f163ac00-d2ca-11eb-8c4c-f7b0cf444a32.jpeg)
+![techBlog構成 001](https://user-images.githubusercontent.com/23703281/122864935-78af2f00-d360-11eb-908c-a30eaf265122.jpeg)
 ※よく見かけるサービス構成図なるものを書いてみた。
 
 techBlogに新たに追加する機能をまとめてみた。
