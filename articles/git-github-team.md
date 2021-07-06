@@ -1,5 +1,5 @@
 ---
-title: "すぐ業務に付けるようにGitHubで一人チーム開発を体験してみた。" # 記事のタイトル
+title: "すぐ業務に就けるようにGitHubで一人チーム開発を体験してみた。" # 記事のタイトル
 emoji: "👨‍❤️‍💋‍👨" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["git", "github", "初心者"] # タグ。["markdown", "rust", "aws"]のように指定する
@@ -325,7 +325,7 @@ git push --delete origin make-rss-do-only-production
 
 ローカルブランチ（ローカル） → 追跡ブランチ（ローカル） → 上流ブランチ（リモート）→ リモートブランチ（リモート）
 
-[http://elsur.xyz/git-commands-pull-fetch](http://elsur.xyz/git-commands-pull-fetch)
+[【Git】トラッキングブランチの存在を意識して理解を深める](http://elsur.xyz/git-commands-pull-fetch)
 
 ローカルブランチを削除するには手動での削除が必要になるので下記のコマンドで削除する。
 
@@ -365,9 +365,10 @@ git・githubは最初よく分からなくて、コンフリクト起こした�
 
 [git mergeを使ってブランチをマージする方法 | TechAcademyマガジン](https://techacademy.jp/magazine/10264)
 
-[https://stackoverflow.com/questions/37664226/git-fetch-origin-prune-doesnt-delete-local-branches](https://stackoverflow.com/questions/37664226/git-fetch-origin-prune-doesnt-delete-local-branches)
+[git fetch origin --prune doesn't delete local branches?
+](https://stackoverflow.com/questions/37664226/git-fetch-origin-prune-doesnt-delete-local-branches)
 
-[https://stackoverflow.com/questions/48820631/git-remote-prune-origin-does-not-delete-the-local-branch-even-if-its-upstream-re](https://stackoverflow.com/questions/48820631/git-remote-prune-origin-does-not-delete-the-local-branch-even-if-its-upstream-re)
+[git remote prune origin does not delete the local branch even if its upstream remote branch is deleted](https://stackoverflow.com/questions/48820631/git-remote-prune-origin-does-not-delete-the-local-branch-even-if-its-upstream-re)
 
 ### 一応読んだ
 
