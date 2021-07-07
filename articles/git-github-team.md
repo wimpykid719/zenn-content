@@ -370,6 +370,16 @@ git・githubは最初よく分からなくて、コンフリクト起こした�
 
 [git remote prune origin does not delete the local branch even if its upstream remote branch is deleted](https://stackoverflow.com/questions/48820631/git-remote-prune-origin-does-not-delete-the-local-branch-even-if-its-upstream-re)
 
+[はじめてのPull Requestをやってみよう](https://qiita.com/wataryooou/items/8dce6b6d5f54ab2cef04)
+
+[開発者のタスク管理がしやすくなるGitHub Issuesの基本的な使い方](https://www.atmarkit.co.jp/ait/articles/1703/29/news021.html)
+
+[【１次試験】fwywd 採用試験](https://fwywd.com/news/recruitment-1st)
+
+[Milestone, Issue, Pull Requestを関連付けて扱う
+](https://qiita.com/kodai_0122/items/18f7faa80f0302244c51)
+
+
 ### 一応読んだ
 
 HEADについて知りたくて読んだが、よく分からなかった。ブランチ、コミットについて詳しく書かれていた。
