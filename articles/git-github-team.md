@@ -62,6 +62,12 @@ git commit -m "メッセージ"
 git commit --amend -m "修正後コメント"
 ```
 
+さらにコミット自体を取り消したい場合は下記のコマンドを実行するとコミットをなかった事にできる。
+
+```bash
+git reset --hard HEAD^
+```
+
 ※gitをインストールして、はじめて使用する場合はユーザを入力してないと `commit` 出来ない。
 
 **ユーザ入力**
@@ -378,6 +384,8 @@ git・githubは最初よく分からなくて、コンフリクト起こした�
 
 [Milestone, Issue, Pull Requestを関連付けて扱う
 ](https://qiita.com/kodai_0122/items/18f7faa80f0302244c51)
+
+[[Git]コミットの取り消し、打ち消し、上書き](https://qiita.com/shuntaro_tamura/items/06281261d893acf049ed)
 
 
 ### 一応読んだ
