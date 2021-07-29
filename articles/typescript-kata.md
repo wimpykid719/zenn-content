@@ -17,6 +17,9 @@ date: '2021.04.08'
 
 ## 環境構築
 
+個人的に `-g` を付けるグローバルインストールは環境を汚染する気がして苦手なのでローカルインストールを行います。
+そのため `tsc` コマンドのみでは実行出来ないため、直接パスを指定する方法か `npx tsc` とする方法の2通りを推奨しています。
+
 - Node.jsインストール
 - 作業ディレクトリを作成
 - `npm install typescript --save-dev`
@@ -25,6 +28,7 @@ date: '2021.04.08'
 - 実行は `../node_modules/.bin/tsc コンパイルしたい.ts` コンパイルして
 - `node index.js` で実行する。
 - `npm install --save-dev @types/node` するとnode.jsのパッケージが使用できる。 `fs` 等
+- パスの指定が毎回面倒な場合は `npx` コマンドを用いることでパスを省略出来る。 `npx tsc -v` 等
 
 ## アンビエント宣言（declare）
 
@@ -592,3 +596,7 @@ console.log(error('This is an error'));
 [【日本一わかりやすいTypeScript入門】ハンズオンで理解するInterfaceとType Aliasの違い](https://www.youtube.com/watch?v=J2vox52T4W8&list=PLX8Rsrpnn3IW0REXnTWQp79mxCvHkIrad&index=10)
 
 [TypeScript で error TS2307: Cannot find module ‘fs’. が表示された時に、@types/node パッケージをインストールすると解決されました。[2020]](https://tech-for.com/2020/03/04/fix-an-error-that-ts2307-cannot-find-module-fs-by-installing-types-node-package/)
+
+[npxコマンドとは？ 何ができるのか？](https://zenn.dev/ryuu/articles/what-npxcommand)
+
+['tsc command not found' in compiling typescript](https://stackoverflow.com/questions/39404922/tsc-command-not-found-in-compiling-typescript)
