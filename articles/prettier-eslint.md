@@ -240,6 +240,22 @@ tsconfig.eslint.json
 
 ## VScode で保存時にコードを整形する
 
+拡張機能として下記を２つインストールする。
+
+Name: Prettier - Code formatter
+Id: esbenp.prettier-vscode
+Description: Code formatter using prettier
+Version: 8.1.0
+Publisher: Prettier
+VS Marketplace Link: [https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+Name: ESLint
+Id: dbaeumer.vscode-eslint
+Description: Integrates ESLint JavaScript into VS Code.
+Version: 2.1.23
+Publisher: Dirk Baeumer
+VS Marketplace Link: [https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
 `.vscode` フォルダ内にある。 `settings.json` に下記の設定を追加する。
 
 この設定はワークスペース呼ばれる場所に VSCode の設定を書いていてデフォルトの設定とは別になる。
