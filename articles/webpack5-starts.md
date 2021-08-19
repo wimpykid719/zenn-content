@@ -863,6 +863,9 @@ module.exports = () => merge(commonConf({ outputFile, assetFile }),  {
 
 ### 参照
 
+古いバージョンのwebpackの解説でいくつかのプラグインは非推奨になっていたり、記述方法が異なっていたりするがとても参考になった講座です。
+[現役エンジニアのためのWebpack環境構築入門 with Babel｜Sass｜Eslint](https://www.udemy.com/course/front-env-setting-webpack/)
+
 [【Webpack5】file-loaderを使った画像の読み込みがうまくいかない](https://teratail.com/questions/327351)
 
 [Conflict: Multiple assets emit to the same filename](https://stackoverflow.com/questions/42148632/conflict-multiple-assets-emit-to-the-same-filename)
