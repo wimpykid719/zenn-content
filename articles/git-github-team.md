@@ -72,6 +72,8 @@ git reset --hard HEAD^
 
 **ユーザ入力**
 
+新しくパソコンを買い替えた際もgitで下記の設定をしておかないと、commitした際にユーザが違う人になってGitHubのアカウントに草が生えなくなる。
+
 ```bash
 git config --global user.name “userName”
 git config --global user.email "xxx@yyy.com"
@@ -307,7 +309,7 @@ git branch --no-merged
 
 リモートリポジトリから最新のmainブランチを同期させる。
 
-※ここでブランチをmainに切り替えてないと、マージマージされないので注意が必要です。
+※ここでブランチをmainに切り替えてないと、マージされないので注意が必要です。
 
 ```bash
 git pull origin main
@@ -341,6 +343,42 @@ git branch -d make-rss-do-only-production
 
 これを繰り返しながらプロダクトを作っていく流れだと思う。
 
+## 会社からパソコンが支給されてgit cloneして作業を始めたい時
+
+とりあえずリポジトリをcloneする。
+
+```bash
+git clone リポジトリのHTTPS
+```
+
+### ブランチも取り込みたい
+
+これは自分が develop ブランチで途中まで作成してた関数の箇所もコードに反映させたいと思ったからである。
+
+まずローカルでブランチを作成する。そこにリモートのブランチをマージする。
+
+```bash
+git branch develop
+git checkout develop
+```
+
+リモートブランチの一覧を確認すると develop ブランチが見当たらない事が分かる。これはリモートブランチにまだdevelopが追加されていないためである。
+
+```bash
+git branch -r
+# 下記のコマンドでリモートブランチを同期する。
+git fetch --prune
+```
+
+そして下記のコマンドでpullする事でローカルにブランチをマージする事ができる。その際vim操作による、コミットメッセージも必要になる。
+
+```bash
+git pull origin develop
+```
+
+仮にmainブランチにある `README.md` だけに変更を加えてpushしたいときはブランチをmainに切り替えて、 `git add README.md` してステージングエリアにあげて `git commit -m "fix:README.md"` して `git push` でmainブランチに反映できる developブランチをマージする際に2つREADME.mdの変更箇所が被ってなければコンフリクトせずにマージされるはず。
+
+
 ## 最後に
 
 git・githubは最初よく分からなくて、コンフリクト起こしたり、あんまり触るのが好きではなかったです。
@@ -354,6 +392,11 @@ git・githubは最初よく分からなくて、コンフリクト起こした�
 そのためだけに難しい言語を覚えて、難しいツールを覚えて使っていこうと思います。
 
 ### 参照
+
+[Gitでremoteリポジトリから新規にbranchを持ってくる方法
+](https://qiita.com/yoshiokaCB/items/eb68db0a81009b85c8a4)
+
+[ローカルブランチに特定のリモートブランチをpull](https://qiita.com/hinatades/items/d47dec72a87c5fed50f7)
 
 [git pushのオプション -u とは - Qiita](https://qiita.com/shumpeism/items/1b8027c8905ca826416d)
 
