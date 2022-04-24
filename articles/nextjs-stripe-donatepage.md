@@ -35,7 +35,7 @@ stripe Docs - カスタムの支払いフロー
 
 [https://github.com/wimpykid719/stripe-sample-typescript](https://github.com/wimpykid719/stripe-sample-typescript)
 
-Reactのフロントエンドを担う箇所のコード `useEffect` で初回ロード時に `[localhost:4242/create-payment-intent](http://localhost:4242/create-payment-intent)` にリクエストを投げる。
+Reactのフロントエンドを担う箇所のコード `useEffect` で初回ロード時に [localhost:4242/create-payment-intent](http://localhost:4242/create-payment-intent) にリクエストを投げる。
 
 `App.tsx`
 
@@ -154,7 +154,7 @@ StripeフォームでPaymentIntent（決済したい値段の情報）を受け�
 
 表示されたフォームにクレジットカード情報を入力して Pay Now ボタンをクリックすると Stripeにクレジットカード情報が飛んで実際に決済が行われる。
 
-****`CheckOutForm.tsx`****
+`CheckOutForm.tsx`
 
 ```tsx
 import React, { useState, useEffect } from "react";
