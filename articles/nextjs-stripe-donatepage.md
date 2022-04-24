@@ -17,6 +17,8 @@ date: '2022.04.24'
 
 ※ 今回実際にNext.jsのブログに追加した[寄付を募るページ](https://techblog-pink.vercel.app/donate/price)
 
+[blog - リポジトリ](https://github.com/wimpykid719/blog) コード全体はここで確認できる。
+
 ## カスタム決済のサンプルのコードをTypeScript化した
 
 stripe Docs - カスタムの支払いフロー
@@ -24,6 +26,8 @@ stripe Docs - カスタムの支払いフロー
 [https://stripe.com/docs/payments/quickstart](https://stripe.com/docs/payments/quickstart)
 
 野良のブログ等を読んでいたが情報が古かったりしたので、公式のサンプルに型を当てながら機能を見て行く事にした。
+
+処理の流れは下記のようになっている。
 
 ![Stripeシステム](https://user-images.githubusercontent.com/23703281/164968971-ad8a4323-23d8-4952-8522-5471cf448aca.png)
 
