@@ -3,7 +3,7 @@ title: "エンジニアとして就職できた" # 記事のタイトル
 emoji: "🌹" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "idea" # tech: 技術記事 / idea: アイデア記事
 topics: ["独学", "転職", "初心者", "未経験エンジニア"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: true # 公開設定（falseにすると下書き）
+published: false # 公開設定（falseにすると下書き）
 date: "2022.02.18"
 ---
 
