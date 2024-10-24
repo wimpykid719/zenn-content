@@ -40,7 +40,7 @@ Dockerファイル、docker-composeファイルを `.devcontainer` に用意す�
 下記のようなメリットがあります。
 
 - ローカル環境を汚さずに開発を行うことができます。
-- 案件ごとにNode, Ruby, Python等のバージョン切り替え等を機にする事なく開発が出来ます。
+- 案件ごとにNode, Ruby, Python等のバージョン切り替え等を気にする事なく開発が出来ます。
 - brewでのパッケージ管理が不要になる、xcodeのインストールも不要です。
 - ローカル環境で開発環境を構築したようにVSCode, Cursorの拡張機能を利用する事ができます。
 - 開発環境を容易に配布出来て、構築もしやすい。
@@ -71,7 +71,7 @@ devcontainer.jsonのみでもコンテナ起動は出来るみたいですが、
 
 現在のgit ブランチが表示されるようにシェルの見た目を変更する設定が書かれています。
 
-作業する際に常に自分がどのブランチを操作しているのかは把握したいため追加してます。
+作業する際、常に自分がどのブランチを操作しているのかは把握したいので追加してます。
 
 ```bash
 source /etc/bash_completion.d/git-prompt
@@ -142,7 +142,10 @@ services:
 
 ### Dockerfile
 
-Jupyter Notebookの公式イメージをベースにgit vimをインストールこれがないと git commit 出来ない、その後シェルにブランチ名表示させる設定を反映させる。Jupyter Notebookの公式イメージで既に作成された `.bashrc` が存在するためそこの下部に設定を追加する。
+Jupyter Notebookの公式イメージをベースにgit vimをインストールします。
+これがないと git commit 出来ないです。
+その後シェルにブランチ名を表示させる設定を反映させています。
+Jupyter Notebookの公式イメージで既に作成された `.bashrc` が存在するためそこの下部に設定を追加します。
 
 ```docker
 FROM jupyter/base-notebook:latest
