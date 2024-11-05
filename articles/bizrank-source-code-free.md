@@ -136,6 +136,7 @@ BizRankは多くの問題を抱えております。
 
 ## BizRankソースコード
 肝心のソースコードはこちらになります。
+MIT licenseが付与してあります。
 
 [BizRank - リポジトリ](https://github.com/wimpykid719/neumann)
 
