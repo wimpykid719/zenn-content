@@ -150,7 +150,7 @@ BizRankは多くの問題を抱えております。
 記事に関するコメント等は
 
 🕊：[Twitter](https://twitter.com/Unemployed_jp)
-👨🏻‍💻：[Github](https://github.com/wimpykid719?tab=repositories)
-😥：[Stackoverflow](https://ja.stackoverflow.com/users/edit/22565)
+👨🏻‍💻：[Github](https://github.com/wimpykid719)
+😥：[Stackoverflow](https://ja.stackoverflow.com/users/22565/wataru)
 
 でも受け付けています。どこかにはいます。
