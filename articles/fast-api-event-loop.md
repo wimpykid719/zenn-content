@@ -1,6 +1,6 @@
 ---
 title: "FastAPIで外部APIリクエストやI/O処理を行う際に気をつけること"
-emoji: "💨"
+emoji: "❌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python", "FastAPI", "Web", "イベントループ", "非同期処理"]
 published: true
