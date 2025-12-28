@@ -4,6 +4,7 @@ emoji: "❌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python", "FastAPI", "Web", "イベントループ", "非同期処理"]
 published: true
+date: '2025.08.30'
 ---
 
 ## はじめに
