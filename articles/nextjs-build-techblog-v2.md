@@ -1,5 +1,5 @@
 ---
-title: "エンジニア転職へ繋がった思い出のブログをFigma Make x Cursorを使って2日でフルリプレイスした。" # 記事のタイトル
+title: "エンジニア転職へ繋がった技術ブログをFigma Make x Cursorを使って2日でフルリプレイスした。" # 記事のタイトル
 emoji: "🧠" # アイキャッチとして使われる絵文字（1文字だけ）
 type: "tech" # tech: 技術記事 / idea: アイデア記事
 topics: ["nextjs", "生成ai", "llm", "tailwindcss", "cursor"] # タグ。["markdown", "rust", "aws"]
