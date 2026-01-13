@@ -9,6 +9,7 @@ date: '2026.01.13'
 
 ## 最初に
 ![Twitter post - 1](https://firebasestorage.googleapis.com/v0/b/blog-bf60d.firebasestorage.app/o/blog-images%2Fnextjs-build-techblog-v2%2FaRe9BBacEv.png?alt=media&token=99ae37b3-574f-4e28-b023-c34935495242)
+※誤解を含む表記すみません、サーバーを持たない訳でなくDBを持たないためコストがかかりにくい構成になっています。
 
 [techBlog：大学生だった](https://techblog-pink.vercel.app/) システムエンジニアを目指した時、作成したブログが4年間放置された状態で当時公開した記事も結構多くのいいねを頂けたので今回作り直しました。[【無料運用】Zennの投稿記事を使ったブログをNext.js, Tailwindcss, TypeScript, Vercelで構築した。](https://zenn.dev/unemployed/articles/nextjs-build-techblog)
 
