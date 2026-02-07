@@ -1100,6 +1100,7 @@ https://www.youtube.com/watch?v=82YdOlNgQZ8&t=21s
 [ビットコイン： P2P 電子通貨システムの詳細解説した記事](https://www.ogis-ri.co.jp/otc/hiroba/technical/bitcoinpaper/part1.html)
 分散型タイムスタンプサーバーへの理解が深まった。
 [タイムスタンプの再発見と「いわゆるブロックチェーン」](https://shanematsuo.medium.com/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%81%AE%E5%86%8D%E7%99%BA%E8%A6%8B%E3%81%A8-%E3%81%84%E3%82%8F%E3%82%86%E3%82%8B%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3-85abb13bdf0e)
+[Satoshiが注意深く設定した世界の境界線](https://shanematsuo.medium.com/satoshi%E3%81%8C%E6%B3%A8%E6%84%8F%E6%B7%B1%E3%81%8F%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E4%B8%96%E7%95%8C%E3%81%AE%E5%A2%83%E7%95%8C%E7%B7%9A-cde3f8ffa0e4)
 [秒間3000～4000取引の処理性能に到達したプライベートブロックチェーン](https://knowledge.sakura.ad.jp/7332)
 [ビットコイン： リポジトリ](https://github.com/bitcoin/bitcoin)
 
