@@ -223,7 +223,7 @@ if __name__ == "__main__":
 ```
 
 *実行結果*
-```
+```plaintext
 index=0, nonce=0, hash=c7881137b58e11a2..., prev=0000000000000000...
 index=1, nonce=271, hash=000889da2ba2c605..., prev=c7881137b58e11a2...
 index=2, nonce=3100, hash=000b4185672fc452..., prev=000889da2ba2c605...
@@ -257,7 +257,7 @@ valid after tamper? False
  - ロックタイム（Locktime） — トランザクションが有効になる時刻/ブロック高
  - 入力数と出力数 — 構造のサイズ情報
 
-![トランザクション](https://firebasestorage.googleapis.com/v0/b/blog-bf60d.firebasestorage.app/o/blog-images%2Fbitcoin%2FGlphEd8Fjh.png?alt=media&token=6e9e6c83-b332-4e3c-8536-e3ce5eb6fc8a)
+![トランザクション](https://firebasestorage.googleapis.com/v0/b/blog-bf60d.firebasestorage.app/o/blog-images%2Fbitcoin-whitepaper%2FkwjNz4D6WO.png?alt=media&token=65642d4c-ec33-4018-b55a-06c37bd3f4fa)
 
 AさんがBさんとコインの取引を行う場合、Aさんの秘密鍵で署名をBさんへの取引に対して行います。それをBさんはAさんの以前の取引に記載されている公開鍵を使い検証する事でその取引がAさんによるものと保証されます。このやり取りを繰り返すと取引履歴がチェーンのように伸びます。これを **電子コイン（ビットコイン）** と呼ぶ。
 つまりこの複雑なやり取りをえてつながった取引履歴を我々はビットコインと呼んでいる。
@@ -1033,7 +1033,7 @@ print(f"Attack Success Probability (q={q}, z={z}): {prob:.8f}")
 
 実際に実行すると論文と近い値が出力され、生成済みのブロックとの差が大きくなるたびに攻撃成功率が下がっているのが確認出来る。
 
-```
+```plaintext
 # 実行結果
 Attack Success Probability (q=0.1, z=2): 0.05097789
 ```
@@ -1043,7 +1043,7 @@ Attack Success Probability (q=0.1, z=2): 0.05097789
 
 実際に６ブロックでの勝率を見るとかなり低い事が証明されました。
 
-```
+```plaintext
 # 実行結果
 Attack Success Probability (q=0.1, z=6): 0.00024280
 ```
