@@ -1099,6 +1099,7 @@ https://www.youtube.com/watch?v=82YdOlNgQZ8&t=21s
 ビットコインにまつわる周辺情報などもまとまっていて、とても参考になった。
 [ビットコイン： P2P 電子通貨システムの詳細解説した記事](https://www.ogis-ri.co.jp/otc/hiroba/technical/bitcoinpaper/part1.html)
 [秒間3000～4000取引の処理性能に到達したプライベートブロックチェーン](https://knowledge.sakura.ad.jp/7332)
+[ビットコイン： リポジトリ](https://github.com/bitcoin/bitcoin)
 
 ## 最後に
 昔は難しくてよく分からなかった、当時中学生だった自分が大人になってビットコインの仕組みについて理解を深め購入する所まで出来て嬉しかったです。
