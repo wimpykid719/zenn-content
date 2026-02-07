@@ -1098,6 +1098,8 @@ https://www.youtube.com/watch?v=82YdOlNgQZ8&t=21s
 
 ビットコインにまつわる周辺情報などもまとまっていて、とても参考になった。
 [ビットコイン： P2P 電子通貨システムの詳細解説した記事](https://www.ogis-ri.co.jp/otc/hiroba/technical/bitcoinpaper/part1.html)
+分散型タイムスタンプサーバーへの理解が深まった。
+[タイムスタンプの再発見と「いわゆるブロックチェーン」](https://shanematsuo.medium.com/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%81%AE%E5%86%8D%E7%99%BA%E8%A6%8B%E3%81%A8-%E3%81%84%E3%82%8F%E3%82%86%E3%82%8B%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3-85abb13bdf0e)
 [秒間3000～4000取引の処理性能に到達したプライベートブロックチェーン](https://knowledge.sakura.ad.jp/7332)
 [ビットコイン： リポジトリ](https://github.com/bitcoin/bitcoin)
 
