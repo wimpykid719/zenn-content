@@ -1150,6 +1150,8 @@ https://www.youtube.com/watch?v=82YdOlNgQZ8&t=21s
 [秒間3000～4000取引の処理性能に到達したプライベートブロックチェーン](https://knowledge.sakura.ad.jp/7332)
 [ビットコイン： リポジトリ](https://github.com/bitcoin/bitcoin)
 
+昔は有料記事だったけど最近無料になったらしい。読んではないけど気になる。
+[ビットコイン研究所](https://bitcoin-research.jp/)
 
 記事に関するコメント等は
 
